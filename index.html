@@ -1,1 +1,48 @@
-index.html 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Registration Form</h1>   
+    <!-- prevents submition with wrong entries -->
+    <form id="registrationForm" onsubmit="return validateForm()">      
+      <!-- Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName">
+        <!-- show error message -->
+        <div class="error-message" id="fullNameError"></div>
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email">
+		<!-- show error message -->
+        <div class="error-message" id="emailError"></div>
+      </div>
+      <!-- Phone number -->
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+		<!-- show error message -->
+        <div class="error-message" id="phoneError"></div>
+      </div>
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+		<!-- show error message -->
+        <div class="error-message" id="passwordError"></div>
+      </div>      
+      <!-- button -->
+      <input type="submit" value="Register">
+    </form>   
+    <!-- Success message-->
+    <div class="success-message" id="successMessage">
+      Registration Successful!
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
